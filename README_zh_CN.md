@@ -12,8 +12,14 @@
 ![Ace Data Cloud 的真实应用密钥界面，密钥已遮挡](assets/get-api-key-en.png)
 
 3. 在 FastGPT 插件配置的 **Ace Data Cloud API key** 只填令牌本身，不加 Bearer 或引号，也不要放进提示词或工作流导出。
-4. 创建空白工作流：**开始 → Ace Data Cloud Face Transform → 输出**。Action 选 keypoints，Analyze mode 填 1（最大的人脸），Image URL 填 https://platform2.cdn.acedata.cloud/seedream/00355681-7e81-49a4-a8fc-d2165fe1e9fd.jpg。这是此前生成的虚构人物测试图；也可换成自己有权处理、可访问的 HTTPS 图片。
-5. 输出节点选择 success、faceCount、data、costCredits、traceId，执行一次。检测到人脸时 faceCount 至少为 1，关键点在 data 中。本工具同步返回，不需要任务 ID 或轮询。到 Ace Data Cloud 请求记录核对调用与 Credits；HTTP 成功也可能得到 faceCount=0。
+4. 在 **Studio → Create Agent → Workflow** 新建工作流。从 **System Tools** 添加 **Ace Data Cloud Face Transform**，激活工具并选择已配置的 **System secret**，连接 **Process starts → Ace Data Cloud Face Transform → Basic / Assigned Reply**。Action 选 keypoints，Analyze mode 填 1（最大的人脸），Image URL 填 https://platform2.cdn.acedata.cloud/seedream/00355681-7e81-49a4-a8fc-d2165fe1e9fd.jpg。这是此前生成的虚构人物测试图；也可换成自己有权处理、可访问的 HTTPS 图片。
+5. 在 **Assigned Reply** 中用变量选择器插入 success、faceCount、data、costCredits、traceId。选择 **Save Only**，再用 **Run Preview** 执行一次。检测到人脸时 faceCount 至少为 1，关键点在 data 中。本工具同步返回，不需要任务 ID 或轮询。到 Ace Data Cloud 请求记录核对调用与 Credits；HTTP 成功也可能得到 faceCount=0。
+
+以下截图展示插件安装，以及 **FastGPT Run Preview 中一次新调用**的结果。
+
+![FastGPT 插件状态 Normal，系统密钥已配置](assets/fastgpt-installed-configured.png)
+
+![FastGPT 新调用及其结果](assets/fastgpt-host-result.png)
 
 ## 无密钥示例
 

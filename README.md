@@ -20,7 +20,7 @@ In FastGPT's plugin configuration, paste the token into **Ace Data Cloud API key
 
 ### 3. Analyze the first portrait
 
-Create a blank workflow and connect **Start → Ace Data Cloud Face Transform → Output**. Set:
+In **Studio → Create Agent → Workflow**, start with **Process starts**. From **System Tools**, add **Ace Data Cloud Face Transform**, activate it with the configured **System secret**, and connect **Process starts → Ace Data Cloud Face Transform → Basic / Assigned Reply**. Set:
 
 | Field | First-run value |
 |---|---|
@@ -28,9 +28,15 @@ Create a blank workflow and connect **Start → Ace Data Cloud Face Transform �
 | Analyze mode | 1 (largest face) |
 | Image URL | https://platform2.cdn.acedata.cloud/seedream/00355681-7e81-49a4-a8fc-d2165fe1e9fd.jpg |
 
-This is a fictional previously generated test portrait. You can replace it with your own authorized, accessible HTTPS image URL. Leave other fields empty. In Output, expose **success**, **faceCount**, **data**, **costCredits**, and **traceId**. Run once. A detected face should produce faceCount at least 1 and structured keypoints in data. This synchronous tool has no task ID or polling node.
+This is a fictional previously generated test portrait. You can replace it with your own authorized, accessible HTTPS image URL. Leave other fields empty. In **Assigned Reply**, insert **success**, **faceCount**, **data**, **costCredits**, and **traceId** with the variable picker. Choose **Save Only**, then **Run Preview** once. A detected face should produce faceCount at least 1 and structured keypoints in data. This synchronous tool has no task ID or polling node.
 
 Check the matching Ace Data Cloud request record and Credits charge. A successful HTTP response does not guarantee a face is present; faceCount may be 0.
+
+The screenshots below show an installed plugin and **one new FastGPT-hosted call** in Run Preview.
+
+![Installed plugin with Normal status and Configured system key](assets/fastgpt-installed-configured.png)
+
+![New FastGPT-hosted call and its result](assets/fastgpt-host-result.png)
 
 ### 4. Copyable local example without a key in the repository
 
