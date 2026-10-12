@@ -1,13 +1,13 @@
 # Ace Data Cloud 人脸处理工具 for FastGPT
 
-[English guide](README.md) · [当前价格](https://platform.acedata.cloud/models)
+[English guide](README.md) · [当前价格](https://platform.acedata.cloud/models?utm_source=opensource&utm_medium=referral&utm_campaign=evergreen&utm_content=facetransformfastgpt_readme_pricing)
 
 本插件支持人脸关键点、美化、年龄变化、性别变化、换脸、卡通化和活体迹象检测。只处理你拥有或获授权的图像。API 目前处于 Alpha；活体结果不能单独证明身份。
 
 ## 从零开始
 
 1. 使用 FastGPT 4.15 或更新版本。上架后在插件市场搜索 **Ace Data Cloud Face Transform**，核对作者是 **Ace Data Cloud**。上架前，企业版或自部署管理员可构建并上传本仓库 .pkg；FastGPT 云服务目前不支持用户直接上传自定义插件。
-2. 登录 [Ace Data Cloud 应用管理](https://platform.acedata.cloud/console/applications)，打开 **General Application**，确认 Face Transform 权限、余额和当期价格。下图 **1** 是复制 API Key；**2 Manage Keys → Create** 可新建 FastGPT 专用密钥。启用 Allowed APIs 时，仅允许计划使用的 /face/analyze、/face/beautify、/face/change-age、/face/change-gender、/face/swap、/face/cartoon、/face/detect-live。
+2. 登录 [Ace Data Cloud 应用管理](https://platform.acedata.cloud/console/applications?utm_source=opensource&utm_medium=referral&utm_campaign=evergreen&utm_content=facetransformfastgpt_readme_api_key)，打开 **General Application**，确认 Face Transform 权限、余额和当期价格。下图 **1** 是复制 API Key；**2 Manage Keys → Create** 可新建 FastGPT 专用密钥。启用 Allowed APIs 时，仅允许计划使用的 /face/analyze、/face/beautify、/face/change-age、/face/change-gender、/face/swap、/face/cartoon、/face/detect-live。
 
 ![Ace Data Cloud 的真实应用密钥界面，密钥已遮挡](assets/get-api-key-en.png)
 

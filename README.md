@@ -1,6 +1,6 @@
 # Ace Data Cloud Face Transform for FastGPT
 
-Analyze a permitted portrait in a FastGPT workflow. The same plugin offers beautify, age transform, gender transform, swap, cartoon, and liveness actions. [简体中文](README_zh_CN.md) · [Current pricing](https://platform.acedata.cloud/models)
+Analyze a permitted portrait in a FastGPT workflow. The same plugin offers beautify, age transform, gender transform, swap, cartoon, and liveness actions. [简体中文](README_zh_CN.md) · [Current pricing](https://platform.acedata.cloud/models?utm_source=opensource&utm_medium=referral&utm_campaign=evergreen&utm_content=facetransformfastgpt_readme_pricing)
 
 Use only images you own or are authorized to process. These APIs are in Alpha and their output may change. A liveness result is an image signal, not identity proof.
 
@@ -12,7 +12,7 @@ Use FastGPT 4.15 or later. Once published, search FastGPT Marketplace for **Ace 
 
 ### 2. Get the correct key
 
-Sign in to [Ace Data Cloud → Applications](https://platform.acedata.cloud/console/applications), open **General Application**, and check **Face Transform** access, balance, and current price. Copy the key with icon **1** below; or use **2 Manage Keys → Create** for a separate FastGPT key. If **Allowed APIs** is enabled, allow the action paths you plan to use: /face/analyze, /face/beautify, /face/change-age, /face/change-gender, /face/swap, /face/cartoon, and /face/detect-live.
+Sign in to [Ace Data Cloud → Applications](https://platform.acedata.cloud/console/applications?utm_source=opensource&utm_medium=referral&utm_campaign=evergreen&utm_content=facetransformfastgpt_readme_api_key), open **General Application**, and check **Face Transform** access, balance, and current price. Copy the key with icon **1** below; or use **2 Manage Keys → Create** for a separate FastGPT key. If **Allowed APIs** is enabled, allow the action paths you plan to use: /face/analyze, /face/beautify, /face/change-age, /face/change-gender, /face/swap, /face/cartoon, and /face/detect-live.
 
 ![Actual Ace Data Cloud application screen with the key redacted](assets/get-api-key-en.png)
 
@@ -75,4 +75,4 @@ Each action is a distinct API call and may be billed. Swap runs synchronously wi
 | 429 | Wait and lower concurrency. |
 | timeout / 5xx | Inspect the original request history before retrying an uncertain paid operation. Give support the trace ID when available, never your key. |
 
-The plugin sends the chosen image URL and settings with the key to api.acedata.cloud. Calls follow [current pricing](https://platform.acedata.cloud/models). [Privacy](PRIVACY.md) · [Source and support](https://github.com/AceDataCloud/FaceTransformFastGPT/issues).
+The plugin sends the chosen image URL and settings with the key to api.acedata.cloud. Calls follow [current pricing](https://platform.acedata.cloud/models?utm_source=opensource&utm_medium=referral&utm_campaign=evergreen&utm_content=facetransformfastgpt_readme_pricing). [Privacy](PRIVACY.md) · [Source and support](https://github.com/AceDataCloud/FaceTransformFastGPT/issues).
